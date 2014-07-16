@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '1.9.3'
 
 gem 'rails', '3.2.13'
 
@@ -8,6 +9,7 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'jquery-rails'
 gem "twitter-bootstrap-rails"
+gem 'thin'
 
 
 # Gems used only for assets and not required
@@ -24,7 +26,6 @@ end
 
 
 group :development do
-  gem 'thin'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'annotate'
