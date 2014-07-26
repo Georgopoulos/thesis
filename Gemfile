@@ -10,6 +10,8 @@ gem 'pg'
 gem 'jquery-rails'
 gem "twitter-bootstrap-rails"
 gem 'thin'
+gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 
 # Gems used only for assets and not required
@@ -37,7 +39,7 @@ group :test, :development do
 end
 
 group :test do
-  gem 'capybara', '1.1.2'
+  gem 'capybara'
 end
 
 # To use ActiveModel has_secure_password
