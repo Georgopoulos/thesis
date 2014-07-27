@@ -4,8 +4,13 @@
 			<%= "#{obj.errors.count} λάθη εμπόδισαν την υποβολη αυτής της φόρμας." %>
 		</div>
 		<ul>
-			<% obj.errors.full_messages.each do |msg| %>
-				<li>* <%= msg %></li>
+			<% obj.errors.messages.each do |attribute, msg| %>
+				<% msg.each do |m| %>		
+					<li>
+						* <%= t attribute, scope: "activerecord.attributes.#{obj.class.name.downcase}" %>:
+						 	 <%=  m %>
+					</li>
+				<% end %>
 			<% end %>
 		</ul>
 	</div>

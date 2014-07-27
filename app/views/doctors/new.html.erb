@@ -1,4 +1,4 @@
-<h1>Εγγραφή νέου γονέα / κηδεμόνα:</h1>
+<h1>Εγγραφή νέου Ειδικού Υγείας:</h1>
 
 <%= form_for @user, html: {class: 'form-vertical'}  do |f| %>
 	<fieldset>
@@ -26,6 +26,9 @@
 
 			<%= f.label :phone, 'Τηλέφωνο' %>
 			<%= f.text_field :phone %>
+
+			<%= f.label :specialty, 'Ειδικότητα' %>
+			<%= f.text_field :specialty %>
 		</div>
 		<div class="form-actions">
 			<%= f.submit 'Εγγραφή', class: 'btn btn-primary' %>

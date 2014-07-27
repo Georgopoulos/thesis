@@ -5,6 +5,9 @@ Thesis::Application.routes.draw do
 
   # Parents
   resources :parents
+
+  # Doctors
+  resources :doctors
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
