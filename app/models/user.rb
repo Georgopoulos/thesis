@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
 # ---------------------------- Mass assignment --------------------------
-  attr_accessible :address, :email, :fullname, :phone, :specialty, :type,
+  attr_accessible :address, :email, :fullname, :phone, :specialty,
   								:password, :password_confirmation
 
   has_secure_password
@@ -19,6 +19,15 @@ class User < ActiveRecord::Base
 
 # ---------------------------- Callbacks -------------------------------
 	before_save { |user| user.email = email.downcase }
+
+# ------------------------- Instance Methods ---------------------------
+  def is_parent?
+    self.type == "Parent"
+  end
+
+  def is_doctor?
+    self.type == "Doctor"
+  end
 
 end
 

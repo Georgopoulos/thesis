@@ -1,7 +1,10 @@
 Thesis::Application.routes.draw do
-  
+
   # Pages
   get '/home' => 'pages#home'
+
+  # Parents
+  resources :parents
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,34 @@
+<h1>Εγγραφή νέου χρήστη</h1>
+
+<%= form_for @user, html: {class: 'form-vertical'}  do |f| %>
+	<fieldset>
+		<legend>
+			Παρακαλούμε εισάγετε τα στοιχεία σας προκειμένου να χρησιμοποιήσετε την εφαρμογή.
+		</legend>
+		
+		<%= render 'shared/error_messages', obj: f.object %>	
+
+		<div class="controls">
+			<%= f.label :email %>
+			<%= f.text_field :email %>
+
+			<%= f.label :password, 'Κωδικός πρόσβασης' %>
+			<%= f.password_field :password %>
+
+			<%= f.label :password_confirmation, 'Επιβεβαίωση κωδικού πρόσβασης' %>
+			<%= f.password_field :password_confirmation %>
+
+			<%= f.label :fullname, 'Ονοματεπώνυμο' %>
+			<%= f.text_field :fullname %>
+
+			<%= f.label :address, 'Διεύθυνση' %>
+			<%= f.text_field :address %>
+
+			<%= f.label :phone, 'Τηλέφωνο' %>
+			<%= f.text_field :phone %>
+		</div>
+		<div class="form-actions">
+			<%= f.submit 'Εγγραφή', class: 'btn btn-primary' %>
+		</div>
+	</fieldset>
+<% end %>
